@@ -17,7 +17,7 @@ This document answers common questions about Quantum Logics, covering setup, usa
 
 ### What is Quantum Logics?
 
-Quantum Logics is a comprehensive job board application built with modern web technologies. It allows companies to post job listings and manage applications, while job seekers can browse opportunities and submit applications. The project showcases a full-stack MERN-style architecture with a focus on clean design and user experience.
+Quantum Logics is a comprehensive software house platform built with modern web technologies. It serves as a company website showcasing products and services, with features including job applications, admin dashboard, and real-time statistics. The project demonstrates a full-stack architecture with a focus on clean design, accessibility, and user experience.
 
 ### What technologies does Quantum Logics use?
 
@@ -395,6 +395,47 @@ curl http://localhost:5000/api/jobs
 2. **App password needed**: Use app-specific password for Gmail
 3. **Firewall blocking**: Port 587 might be blocked
 4. **Email provider limits**: Check sending limits
+
+### Why is the frontend build failing with warnings?
+
+**Common ESLint warnings and solutions:**
+
+#### jsx-a11y/anchor-is-valid
+**Problem**: Using `<a href="#">` for placeholder links
+**Solution**: Replace with `<button>` elements:
+```jsx
+// ❌ Wrong
+<a href="#" onClick={handleClick}>Link</a>
+
+// ✅ Correct
+<button onClick={handleClick}>Link</button>
+```
+
+#### Unused imports
+**Problem**: Importing but not using components/modules
+**Solution**: Remove unused imports:
+```jsx
+// ❌ Wrong
+import { useState, useEffect } from "react";
+import Icon from "./Icon"; // Not used
+
+// ✅ Correct
+import { useState, useEffect } from "react";
+```
+
+**Build verification:**
+```bash
+cd frontend
+npm run build
+# Should complete with exit code 0 and no warnings
+```
+
+### How do I fix build errors?
+
+1. **Check the build output**: Run `npm run build` and read error messages
+2. **Fix ESLint warnings**: Address all accessibility and code quality issues
+3. **Remove unused code**: Clean up imports and CSS classes
+4. **Verify accessibility**: Ensure all interactive elements are properly implemented
 
 ### How do I reset the database?
 

@@ -1,17 +1,18 @@
-# Quantum-Logics
+# Quantum Logics
 
-A comprehensive full-stack application with quantum logic capabilities, featuring a robust backend and modern frontend architecture.
+A comprehensive software house platform featuring modern web technologies, showcasing products, services, and career opportunities with a focus on clean design and accessibility.
 
 ## Overview
 
-Quantum-Logics is a monorepo project that combines quantum computing principles with practical application logic. The project is structured with separate backend and frontend submodules, enabling independent development and deployment of each component.
+Quantum Logics is a full-stack web application that serves as a modern software company website. It features product showcases, job application systems, admin dashboard with real-time statistics, and demonstrates best practices in web development including accessibility compliance and clean build processes.
 
 ## Project Structure
 
 ```
 Quantum-Logics/
-├── backend/              # Backend service (submodule)
-├── frontend/             # Frontend application (submodule)
+├── backend/              # Backend API service (submodule)
+├── frontend/             # React frontend application (submodule)
+├── docs/                 # Comprehensive documentation
 ├── .gitmodules           # Git submodules configuration
 ├── .gitignore            # Git ignore rules
 └── LICENSE               # MIT License
@@ -21,13 +22,15 @@ Quantum-Logics/
 
 ### Backend
 
-The backend handles the core logic and API services. Stored as a submodule for independent version control and CI/CD management.
+The backend provides RESTful API services with Express.js and MongoDB integration.
 
-**Key aspects:**
-- RESTful or GraphQL API endpoints
-- Business logic and data processing
-- Database integration
-- Authentication and authorization
+**Key features:**
+- RESTful API endpoints
+- JWT authentication system
+- MongoDB database with Mongoose ODM
+- Email notifications with Nodemailer
+- Admin dashboard data endpoints
+- Job application management
 
 To work with the backend:
 
@@ -38,13 +41,16 @@ cd backend
 
 ### Frontend
 
-The frontend provides the user interface and client-side logic. Maintained as a separate submodule for independent releases and updates.
+The frontend is a modern React application with emphasis on accessibility and user experience.
 
-**Key aspects:**
-- User interface components
-- Client-side state management
-- API integration
-- Responsive design
+**Key features:**
+- React 19.2.4 with modern hooks
+- Responsive design with pure CSS
+- Accessibility compliance (WCAG 2.1)
+- Product showcase and company information
+- Job application system
+- Real-time statistics dashboard
+- Clean build with no warnings
 
 To work with the frontend:
 
@@ -174,6 +180,20 @@ Each component may require its own `.env` file. Check the backend and frontend d
 - `PORT` - Service port
 - `NODE_ENV` - Environment (development, staging, production)
 
+## Recent Updates (March 2025)
+
+### ✅ Build Quality Improvements
+- **Clean Build**: Eliminated all ESLint warnings and build errors
+- **Accessibility**: Fixed jsx-a11y compliance issues
+- **Code Quality**: Removed unused imports and optimized components
+- **UI Enhancement**: Improved hero section alignment and responsiveness
+
+### 📚 Documentation Updates
+- **Architecture**: Comprehensive system architecture documentation
+- **Contributing**: Updated guidelines with build requirements
+- **FAQ**: Added troubleshooting section for common build issues
+- **Changelog**: Detailed release notes and version history
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -183,6 +203,11 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+**Build Requirements**: All contributions must pass:
+- Clean frontend build (`npm run build` with no warnings)
+- Accessibility compliance checks
+- Code quality standards
 
 When contributing to submodules, ensure changes are well-tested and documented.
 
@@ -196,6 +221,7 @@ Copyright (c) 2026 Muhammad Saad Amin - Canvas Market
 
 For detailed information about specific components:
 
+- **Comprehensive Documentation:** See `docs/` directory
 - **Backend Documentation:** See `backend/README.md`
 - **Frontend Documentation:** See `frontend/README.md`
 

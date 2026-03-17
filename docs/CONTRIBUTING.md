@@ -13,6 +13,7 @@ Thank you for your interest in contributing to Quantum Logics! This document pro
 - [Submitting Changes](#submitting-changes)
 - [Bug Reports](#bug-reports)
 - [Feature Requests](#feature-requests)
+- [Build Requirements](#build-requirements)
 
 ## Code of Conduct
 
@@ -371,5 +372,82 @@ Contributors are recognized in:
 - README.md contributors section
 - Release notes
 - Annual contributor highlights
+
+## Build Requirements
+
+### Frontend Build Standards
+
+All contributions must pass the following build requirements:
+
+1. **Clean Build**: The frontend must build without any warnings or errors
+   ```bash
+   cd frontend
+   npm run build
+   ```
+   - Exit code must be 0
+   - No ESLint warnings
+   - No compilation errors
+
+2. **Accessibility Compliance**: Code must pass accessibility checks
+   - No `jsx-a11y/anchor-is-valid` warnings
+   - Proper semantic HTML5 elements
+   - ARIA labels where required
+
+3. **Code Quality**: No unused imports or variables
+   - Remove unused imports (e.g., `import Icon from "./Icon"`)
+   - Clean up unused CSS classes
+   - Follow ESLint rules
+
+### Pre-commit Checklist
+
+Before submitting a pull request, ensure:
+
+- [ ] Frontend builds cleanly (`npm run build`)
+- [ ] No ESLint warnings or errors
+- [ ] All accessibility issues resolved
+- [ ] Unused code removed
+- [ ] Tests pass (if applicable)
+- [ ] Documentation updated (if needed)
+
+### Common Build Issues and Solutions
+
+#### jsx-a11y/anchor-is-valid
+**Problem**: Using `<a href="#">` for placeholder links
+**Solution**: Replace with `<button>` elements:
+```jsx
+// ❌ Wrong
+<a href="#" onClick={handleClick}>Link</a>
+
+// ✅ Correct
+<button onClick={handleClick}>Link</button>
+```
+
+#### Unused Imports
+**Problem**: Importing but not using components/modules
+**Solution**: Remove unused imports:
+```jsx
+// ❌ Wrong
+import { useState, useEffect } from "react";
+import Icon from "./Icon"; // Not used
+
+// ✅ Correct
+import { useState, useEffect } from "react";
+```
+
+### Build Verification
+
+To verify your changes meet requirements:
+
+```bash
+# Frontend build check
+cd frontend
+npm run build
+
+# ESLint check (if available)
+npx eslint src/components/
+
+# Test the application locally
+npm start
+```
 
 Thank you for contributing to Quantum Logics! 🚀

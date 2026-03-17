@@ -1,6 +1,6 @@
 # Quantum Logics Documentation
 
-Welcome to the Quantum Logics documentation hub. This directory contains comprehensive documentation for developers, users, and contributors to the Quantum Logics job board application.
+Welcome to the Quantum Logics documentation hub. This directory contains comprehensive documentation for developers, users, and contributors to the Quantum Logics software house platform.
 
 ## 📚 Documentation Index
 
@@ -21,7 +21,7 @@ Welcome to the Quantum Logics documentation hub. This directory contains compreh
 
 ### 📋 Project Management
 - **[Changelog](CHANGELOG.md)** - Version history and release notes
-- **[Roadmap](#roadmap)** - Future plans and development timeline
+- **[Deployment Guide](DEPLOYMENT.md)** - Production deployment instructions
 - **[Issues](https://github.com/SENODROOM/Quantum-Logics/issues)** - Bug reports and feature requests
 
 ## 🚀 Quick Start
