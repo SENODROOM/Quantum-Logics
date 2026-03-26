@@ -5,21 +5,25 @@ Welcome to the Quantum Logics documentation hub. This directory contains compreh
 ## 📚 Documentation Index
 
 ### 🚀 Getting Started
+
 - **[Main README](../README.md)** - Project overview and quick start guide
 - **[FAQ](FAQ.md)** - Frequently asked questions and troubleshooting
 - **[Installation Guide](#installation)** - Step-by-step setup instructions
 
 ### 🏗️ Architecture & Design
+
 - **[Architecture](ARCHITECTURE.md)** - System architecture and technical design
 - **[API Documentation](#api-documentation)** - REST API endpoints and usage
 - **[Database Schema](#database-schema)** - Data models and relationships
 
 ### 👥 Community & Contributing
+
 - **[Contributing Guide](CONTRIBUTING.md)** - How to contribute to the project
 - **[Code of Conduct](CODE_OF_CONDUCT.md)** - Community guidelines and standards
 - **[Security Policy](SECURITY.md)** - Security practices and vulnerability reporting
 
 ### 📋 Project Management
+
 - **[Changelog](CHANGELOG.md)** - Version history and release notes
 - **[Deployment Guide](DEPLOYMENT.md)** - Production deployment instructions
 - **[Issues](https://github.com/SENODROOM/Quantum-Logics/issues)** - Bug reports and feature requests
@@ -27,11 +31,13 @@ Welcome to the Quantum Logics documentation hub. This directory contains compreh
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18+
 - MongoDB 5.0+
 - Git with submodule support
 
 ### Installation
+
 ```bash
 # Clone with submodules
 git clone --recurse-submodules https://github.com/SENODROOM/Quantum-Logics.git
@@ -51,7 +57,8 @@ npm start   # Frontend (terminal 2)
 ```
 
 ### Default Credentials
-- **Admin**: admin@quantumlogics.io / admin123
+
+- **Admin**: ADMIN_ACCOUNT / ADMIN_ACCOUNT_PASS
 - **User**: Register new account
 
 ## 🏗️ Architecture Overview
@@ -70,6 +77,7 @@ Quantum Logics follows a modular, full-stack architecture:
 ```
 
 ### Key Features
+
 - **User Management**: Registration, authentication, role-based access
 - **Job Board**: Post, browse, and filter job listings
 - **Application System**: Submit and track job applications
@@ -81,12 +89,14 @@ Quantum Logics follows a modular, full-stack architecture:
 ### API Documentation
 
 #### Authentication Endpoints
+
 ```http
 POST /api/auth/register
 POST /api/auth/login
 ```
 
 #### Job Management
+
 ```http
 GET    /api/jobs          # Public job listings
 GET    /api/jobs/all      # All jobs (admin)
@@ -96,6 +106,7 @@ DELETE /api/jobs/:id      # Delete job (admin)
 ```
 
 #### Application Management
+
 ```http
 POST   /api/applications           # Submit application
 GET    /api/applications/mine      # My applications
@@ -106,6 +117,7 @@ PATCH  /api/applications/:id/status # Update status (admin)
 ### Database Schema
 
 #### Users Collection
+
 ```javascript
 {
   _id: ObjectId,
@@ -119,6 +131,7 @@ PATCH  /api/applications/:id/status # Update status (admin)
 ```
 
 #### Jobs Collection
+
 ```javascript
 {
   _id: ObjectId,
@@ -137,6 +150,7 @@ PATCH  /api/applications/:id/status # Update status (admin)
 ```
 
 #### Applications Collection
+
 ```javascript
 {
   _id: ObjectId,
@@ -159,6 +173,7 @@ PATCH  /api/applications/:id/status # Update status (admin)
 ## 🛠️ Development
 
 ### Project Structure
+
 ```
 Quantum-Logics/
 ├── backend/              # Express.js API (submodule)
@@ -181,6 +196,7 @@ Quantum-Logics/
 ```
 
 ### Development Workflow
+
 1. **Setup**: Clone repository and install dependencies
 2. **Development**: Use `npm run dev` for backend, `npm start` for frontend
 3. **Testing**: Run tests with `npm test`
@@ -188,6 +204,7 @@ Quantum-Logics/
 5. **Deployment**: Deploy to Vercel (backend) and static hosting (frontend)
 
 ### Coding Standards
+
 - Follow existing code patterns and style
 - Use conventional commit messages
 - Write tests for new functionality
@@ -197,6 +214,7 @@ Quantum-Logics/
 ## 🔒 Security
 
 ### Implemented Measures
+
 - **Password Hashing**: bcrypt with salt rounds
 - **JWT Authentication**: Secure token-based auth
 - **Input Validation**: Server-side validation on all inputs
@@ -205,6 +223,7 @@ Quantum-Logics/
 - **Environment Variables**: Sensitive data in environment files
 
 ### Best Practices
+
 - Use HTTPS in production
 - Regularly update dependencies
 - Implement proper error handling
@@ -214,6 +233,7 @@ Quantum-Logics/
 ## 📈 Performance
 
 ### Optimization Techniques
+
 - **Database Indexing**: Optimized query performance
 - **API Response Caching**: Reduce database load
 - **Frontend Code Splitting**: Lazy load components
@@ -221,6 +241,7 @@ Quantum-Logics/
 - **Bundle Size Reduction**: Minimize JavaScript payload
 
 ### Monitoring
+
 - **API Response Times**: Track endpoint performance
 - **Database Query Performance**: Monitor slow queries
 - **Frontend Metrics**: Core Web Vitals tracking
@@ -229,6 +250,7 @@ Quantum-Logics/
 ## 🚀 Deployment
 
 ### Production Architecture
+
 ```
 Internet → CDN/Static Hosting → Frontend (React)
                     ↓
@@ -238,11 +260,13 @@ Internet → CDN/Static Hosting → Frontend (React)
 ```
 
 ### Environment Setup
+
 - **Development**: Local MongoDB and Node.js
 - **Staging**: Vercel preview deployments
 - **Production**: Vercel (backend) + CDN (frontend) + MongoDB Atlas
 
 ### Deployment Process
+
 1. **Code Changes**: Push to feature branch
 2. **Pull Request**: Review and merge to main
 3. **CI/CD**: Automatic deployment to staging
@@ -252,6 +276,7 @@ Internet → CDN/Static Hosting → Frontend (React)
 ## 🗺️ Roadmap
 
 ### Version 1.1.0 (Q1 2024)
+
 - [ ] Advanced search with filters
 - [ ] File upload for resumes
 - [ ] Email template customization
@@ -259,6 +284,7 @@ Internet → CDN/Static Hosting → Frontend (React)
 - [ ] Mobile app (React Native)
 
 ### Version 1.2.0 (Q2 2024)
+
 - [ ] Real-time notifications
 - [ ] Application workflow automation
 - [ ] Advanced analytics and reporting
@@ -266,6 +292,7 @@ Internet → CDN/Static Hosting → Frontend (React)
 - [ ] Integration with ATS systems
 
 ### Version 2.0.0 (Q3 2024)
+
 - [ ] Microservices architecture
 - [ ] GraphQL API
 - [ ] Progressive Web App (PWA)
@@ -277,6 +304,7 @@ Internet → CDN/Static Hosting → Frontend (React)
 We welcome contributions from the community! Here's how you can help:
 
 ### Ways to Contribute
+
 - **Code**: Fix bugs, add features, improve performance
 - **Documentation**: Improve docs, add examples, fix typos
 - **Testing**: Write tests, improve test coverage
@@ -284,6 +312,7 @@ We welcome contributions from the community! Here's how you can help:
 - **Feedback**: Report bugs, suggest features
 
 ### Getting Started
+
 1. Read the [Contributing Guide](CONTRIBUTING.md)
 2. Fork the repository
 3. Create a feature branch
@@ -291,6 +320,7 @@ We welcome contributions from the community! Here's how you can help:
 5. Submit a pull request
 
 ### Community Guidelines
+
 - Follow our [Code of Conduct](CODE_OF_CONDUCT.md)
 - Be respectful and inclusive
 - Help others learn and grow
@@ -299,12 +329,14 @@ We welcome contributions from the community! Here's how you can help:
 ## 📞 Support
 
 ### Getting Help
+
 - **Documentation**: Check these docs first
 - **GitHub Issues**: Search or create new issues
 - **Discussions**: Join GitHub Discussions
 - **Email**: Contact maintainers directly
 
 ### Reporting Issues
+
 1. **Search existing issues** to avoid duplicates
 2. **Use issue templates** for bug reports and features
 3. **Provide detailed information** about your issue
@@ -314,6 +346,7 @@ We welcome contributions from the community! Here's how you can help:
 ## 📄 License
 
 Quantum Logics is licensed under the [MIT License](../LICENSE). You're free to:
+
 - ✅ Use the code for personal or commercial projects
 - ✅ Modify and distribute the code
 - ✅ Create derivative works
@@ -334,18 +367,21 @@ Thank you to everyone who has contributed to Quantum Logics:
 ## 📚 Additional Resources
 
 ### Learning Resources
+
 - [React Documentation](https://react.dev/)
 - [Express.js Guide](https://expressjs.com/en/guide/)
 - [MongoDB Manual](https://docs.mongodb.com/manual/)
 - [JWT Handbook](https://jwt.io/introduction)
 
 ### Tools and Services
+
 - [Vercel](https://vercel.com/) - Deployment platform
 - [MongoDB Atlas](https://www.mongodb.com/atlas) - Cloud database
 - [GitHub](https://github.com) - Version control
 - [Netlify](https://www.netlify.com/) - Static hosting
 
 ### Community
+
 - [GitHub Repository](https://github.com/SENODROOM/Quantum-Logics)
 - [Issues and Discussions](https://github.com/SENODROOM/Quantum-Logics/issues)
 - [Security Reporting](SECURITY.md#reporting-a-vulnerability)
